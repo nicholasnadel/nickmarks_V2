@@ -1,4 +1,4 @@
-##Nickmarks
+##[Nickmarks](http://nickmarks.herokuapp.com/)
 #A social bookmarking application featuring: 
 
 - Omniauthentication so users can sign up via email address or Facebook!
