@@ -1,0 +1,22 @@
+  <nav>
+  <div class="container">
+    <div class="header">
+      <div class="nav nav-tabs">
+        <div class="pull-left nav-left">
+          <%= link_to "All Bookmarks", root_path %>
+          <%= link_to "Tags", bookmarks_path %>
+        </div>
+
+        <div class="pull-right nav-right">
+          <% if current_user %>
+            <%= link_to  (current_user.name || current_user.email), edit_user_registration_path %><a href="/users/edit"><i class="glyphicon glyphicon-user"></i></a>
+            <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to "Sign in", new_user_session_path %>
+            <%= link_to "Sign up", new_user_registration_path %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    </div>
+    </nav>

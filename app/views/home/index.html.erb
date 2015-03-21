@@ -1,0 +1,40 @@
+<% if current_user %>
+  <h2>All Bookmarks</h2>
+  <% @categories.each do |category| %>
+    <h4><%= link_to "##{category.name}", category %></h4>
+    <% category.bookmarks.each do |bookmark| %>
+      <div class="card">
+        <div class="media-body">
+          <%= render partial: 'likes/like', locals: { bookmark: bookmark } %>
+          <%= link_to bookmark.url %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% else %>
+<div align="center">
+<div class="jumbotron">
+    <h1>Blocmarks</h1>
+    <h2>Social Bookmarking</h2>
+      <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), class: 'btn btn-primary' %>
+      <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-success' %></br>
+      <%= link_to "or Sign In with email", new_user_session_path, class: 'small' %>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Social Bookmarking</h2>
+      <p>Peruse other user's bookmarks and maintain your own categorized bookmarks.</p>
+    </div>
+    <div class="col-md-4">
+      <h2>Email Integration</h2>
+      <p>Add your bookmarks via email to nick@app32213585.mailgun.org, with hashtag categories in the subject line and URL in the email body.</p>
+    </div>
+    <div class="col-md-4">
+      <h2>Facebook Authorization</h2>
+      <p>Sign up with Facebook!.</p>
+    </div>
+  </div>
+</body>
+</div>
+<% end %>

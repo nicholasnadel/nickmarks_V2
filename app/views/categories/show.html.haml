@@ -1,0 +1,6 @@
+%h1= @category.name
+- @category.bookmarks.each do |bookmark|
+  .media
+    .media-body
+      = link_to bookmark.url, bookmark.url
+      = link_to "Edit", edit_bookmark_path(bookmark), class: 'btn btn-success'

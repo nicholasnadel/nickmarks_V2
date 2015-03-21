@@ -1,0 +1,35 @@
+  <div class="jumbotron">
+    <h1>All My Bookmarks</h1>
+    <span class="glyphicons glyphicons-plus"></span>
+  </div>
+<% if policy(Bookmark.new).create? %>
+<span>
+  <a href="/bookmarks/new"><i class="glyphicon glyphicon-plus"> Add </i></a>
+  </span>
+<% end %>
+<% @categories.each do |category| %>
+  <h2>
+    <%= link_to "##{category.name}", category %>
+  </h2>
+  <% category.bookmarks.each do |bookmark| %>
+    <div class="card">
+      <div class="media-body">
+        <%= link_to bookmark.url  %>
+        <%= time_ago_in_words bookmark.created_at %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+<br/>
+<br/>
+<div class="jumbotron">
+<h1>Faves</h1>
+</div>
+<% current_user.likes.each do |like| %>
+  <% bookmark = Bookmark.find(like.bookmark_id) %>
+  <div class="card">
+      <%= render partial: 'likes/like', locals: { bookmark: bookmark } %>
+      <%= link_to bookmark.url %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,3 @@
+%h1 @bookmark.title
+%p @bookmark.url, :target => "_blank" do
+= render partial: 'likes/like', locals: { bookmark: @bookmark }

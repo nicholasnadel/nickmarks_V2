@@ -1,0 +1,97 @@
+@import "bootstrap";
+
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-image: "../public/intro-bg.jpg";
+}
+
+h1 {
+  text-align: center
+}
+
+h5, h3 {
+    text-align: center
+}
+
+h2, h4 {
+  margin-top: 40px;
+}
+
+.nav {
+  margin: 5px;
+  font-size: 15px;
+  a {
+    margin: 10px;
+    color: black;
+  }
+}
+
+.devise-header {
+  text-align: center;
+}
+
+.small {
+  font-size: 12px;
+}
+
+.btn {
+  width: 180px;
+  color: #fff;
+}
+
+.glyphicon {
+  font-size: 16px;
+}
+
+
+.btn-success {
+  color: #fff;
+}
+
+.card {
+  padding:1rem 1rem 1.5rem 1.5rem;
+  width: 25%;
+  box-shadow:1px 1px 5px #aaa;
+  background:white;
+  margin:0 1rem 1rem;
+  border-radius:3px;
+  user-select:none;
+  animation:fly-in-from-left .5s 1s ease both;
+  transform-origin:top left;
+}
+
+
+.glyphicon-center {
+  text-align: center;
+}
+
+#masonry-container {
+  background: #FFF;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  clear: both;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+
+
+p#welcome {
+  background-color: rgba(236, 240, 241,0.5);
+  color: inherit;
+  text-align: left;
+  padding:1rem 1rem 1rem 1rem;
+  width: 80%;
+  margin:0 1rem 1rem;
+  border-radius:3px;
+}
+
+
+body.welcome {
+background: {
+  image: asset-url("intro-bg.jpg");
+}
+}
