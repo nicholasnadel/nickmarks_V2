@@ -1,8 +1,8 @@
-#[Nickmarks](http://nickmarks.herokuapp.com/)
+[Nickmarks](http://nickmarks.herokuapp.com/)
 
 ![alt text](/public/nickmarks.png)
 
-##A social bookmarking application featuring: 
+A social bookmarking application featuring: 
 
 
 - Omniauthentication so users can sign up via email address or Facebook!
